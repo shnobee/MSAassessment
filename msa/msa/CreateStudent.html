@@ -9,6 +9,7 @@
     <script src="scripts/bootstrap.min.js"></script>
     <script src="scripts/StudentModule.js"></script>
     <script src="scripts/CreateStudent.js"></script>
+    <script src="scripts/nod.js"></script>
 </head>
 <body>
  
@@ -41,5 +42,19 @@
             $("#header").load("header.html");
         });
     </script>
+    <script>
+        nod.classes.successClass = 'has-success';
+        nod.classes.errorClass = 'has-error';
+            // create an instance to work with by calling it.
+            var myNod = nod();
+
+            // Add a check to nod.
+            myNod.add({
+                selector: '.form-group',
+                validate: 'presence',
+                errorMessage: 'Required.'
+            });
+    </script>
+
 </body>
 </html>

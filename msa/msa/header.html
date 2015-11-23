@@ -1,21 +1,28 @@
 ﻿<script src="../scripts/menu-script.js"></script>
 <script src="../scripts/bootstrap.min.js"></script>
 <div id="fb-root"></div>
-
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=1114481895229799";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <header>
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Contoso University</a>
             </div>
-            <div>
+            <>
                 <ul class="nav navbar-nav">
                     <li class="active" id="studentsMenuButton"><a href="/students.html">Students</a></li>
                     <li class="active" id="coursesMenuButton"><a href="/courses.html">Courses</a></li>
                     <li class="active" id="aboutMenuButton"><a href="#">About</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    
+                    <li class="fb-login-button" data-size="medium" data-show-faces="false" data-auto-logout-link="true"></li>
                 </ul>
             </div>
         </div>
