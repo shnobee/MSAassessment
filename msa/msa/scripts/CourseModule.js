@@ -29,7 +29,46 @@ var CourseModule = (function () {
                 }
             });
 
-        }
+        },
+
+        getCourseById: function (id, callback) {
+
+            $.ajax({
+                type: "GET",
+                dataType: "json",
+                url: "http://msashnobee.azurewebsites.net/api/Courses/" + id,
+                success: function (data) {
+                    console.log(data);
+                    callback(data);
+                }
+            });
+
+        },
+
+        updateCourse: function (courseid, course, callback) {
+
+            $.ajax({
+                url: "http://msashnobee.azurewebsites.net/api/Courses/" + courseid,
+                type: "PUT",
+                data: course,
+                success: function (data, textStatus, jqXHR) {
+                    callback();
+                }
+            });
+        },
+
+        addCourse: function (course, callback) {
+
+            $.ajax({
+                url: "http://msashnobee.azurewebsites.net/api/Courses/",
+                type: "POST",
+                data: course,
+                success: function (data, textStatus, jqXHR) {
+                    callback();
+                }
+            });
+
+        },
     };
 }());
 
@@ -82,7 +121,7 @@ function loadCoursesTable() {
 
             // Create row
             var row = document.createElement('tr');
-            row.setAttribute("data-id", courses[i].ID);
+            row.setAttribute("data-id", courses[i].CourseID);
 
             // Create columns
             var titleCol = document.createElement('td');
@@ -103,7 +142,7 @@ function loadCoursesTable() {
             // You can set your own attributes to elements. This is pretty handy
             // for idenitfying them without using the id tag, or keeping context
             // between different pages (see the 'detail' page event handler down)
-            editbtn.setAttribute("data-id", courses[i].ID);
+            editbtn.setAttribute("data-id", courses[i].CourseID);
             editbtn.setAttribute("data-btntype", "edit");
 
             editcol.appendChild(editbtn);
@@ -113,7 +152,7 @@ function loadCoursesTable() {
             var deletebtn = document.createElement('button');
             deletebtn.className = "btn btn-default";
             deletebtn.innerHTML = "Delete";
-            deletebtn.setAttribute("data-id", courses[i].ID);
+            deletebtn.setAttribute("data-id", courses[i].CourseID);
             deletebtn.setAttribute("data-btntype", "delete");
 
             deletecol.appendChild(deletebtn);
@@ -142,12 +181,12 @@ function loadCoursesTable() {
 
                 // Edit
                 if (target.getAttribute("data-btntype") === "edit") {
-                    window.location.href = 'edit.html' + '?id=' + target.getAttribute("data-id");
+                    window.location.href = 'editCourse.html' + '?id=' + target.getAttribute("data-id");
                     return;
 
                     // Delete
                 } else if (target.getAttribute("data-btntype") === "delete") {
-                    CourseModule.deleteStudent(target.getAttribute("data-id"), function () {
+                    CourseModule.deleteCourse(target.getAttribute("data-id"), function () {
                         window.location.reload(true);
                     });
                     return;

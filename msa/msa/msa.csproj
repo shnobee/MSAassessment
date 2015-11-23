@@ -123,6 +123,7 @@
     <Content Include="css\fakeLoader.css" />
     <Content Include="css\style.css" />
     <Content Include="edit.html" />
+    <Content Include="editCourse.html" />
     <Content Include="Global.asax" />
     <Content Include="images\bg.png" />
     <Content Include="index.html" />
@@ -130,6 +131,7 @@
     <Content Include="scripts\CourseModule.js" />
     <Content Include="scripts\createpages.js" />
     <Content Include="scripts\detailpages.js" />
+    <Content Include="scripts\editCourses.js" />
     <Content Include="scripts\editpages.js" />
     <Content Include="scripts\fakeLoader.min.js" />
     <Content Include="scripts\index.js" />
