@@ -43,7 +43,7 @@ function loadForm(obj) {
 
     // Prefill form with details
     for (var key in obj) {
-        if (key.toLowerCase() !== "courseid") {
+        if (key.toLowerCase() !== "courseid" && key.toLowerCase !== "assessments") {
             console.log(key)
             var forminput = document.getElementById(key + 'input');
             forminput.value = obj[key];
