@@ -22,7 +22,7 @@ var CourseModule = (function () {
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: "http://msashnobee.azurewebsites.net/api/Courses",
+                url: "https://msashnobee.azurewebsites.net/api/Courses",
                 success: function (data) {
                     console.log(data);
                     callback(data);
@@ -36,7 +36,7 @@ var CourseModule = (function () {
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: "http://msashnobee.azurewebsites.net/api/Courses/" + id,
+                url: "https://msashnobee.azurewebsites.net/api/Courses/" + id,
                 success: function (data) {
                     console.log(data);
                     callback(data);
@@ -48,7 +48,7 @@ var CourseModule = (function () {
         updateCourse: function (courseid, course, callback) {
 
             $.ajax({
-                url: "http://msashnobee.azurewebsites.net/api/Courses/" + courseid,
+                url: "https://msashnobee.azurewebsites.net/api/Courses/" + courseid,
                 type: "PUT",
                 data: course,
                 success: function (data, textStatus, jqXHR) {
@@ -60,7 +60,7 @@ var CourseModule = (function () {
         addCourse: function (course, callback) {
 
             $.ajax({
-                url: "http://msashnobee.azurewebsites.net/api/Courses/",
+                url: "https://msashnobee.azurewebsites.net/api/Courses/",
                 type: "POST",
                 data: course,
                 success: function (data, textStatus, jqXHR) {
@@ -75,7 +75,7 @@ var CourseModule = (function () {
             $.ajax({
                 type: "DELETE",
                 dataType: "json",
-                url: "http://msashnobee.azurewebsites.net/api/Courses/" + courseid,
+                url: "https://msashnobee.azurewebsites.net/api/Courses/" + courseid,
                 success: function (data) {
                     callback();
                 }

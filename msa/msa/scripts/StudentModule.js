@@ -157,7 +157,7 @@ var StudentModule = (function () {
             $.ajax({ 
                 type: "GET",
                 dataType: "json",
-                url: "http://msashnobee.azurewebsites.net/api/Students",
+                url: "https://msashnobee.azurewebsites.net/api/Students",
                 success: function(data){        
                     console.log(data);
                     callback(data);
@@ -172,7 +172,7 @@ var StudentModule = (function () {
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: "http://msashnobee.azurewebsites.net/api/Students/" + id,
+                url: "https://msashnobee.azurewebsites.net/api/Students/" + id,
                 success: function (data) {
                     console.log(data);
                     callback(data);
@@ -184,7 +184,7 @@ var StudentModule = (function () {
         updateStudent: function (studentid, student, callback) {
 
             $.ajax({
-                url: "http://msashnobee.azurewebsites.net/api/Students/" + studentid,
+                url: "https://msashnobee.azurewebsites.net/api/Students/" + studentid,
                 type: "PUT",
                 data: student,
                 success: function (data, textStatus, jqXHR) {
@@ -196,7 +196,7 @@ var StudentModule = (function () {
         addStudent: function (student, callback) {
 
             $.ajax({
-                url: "http://msashnobee.azurewebsites.net/api/Students/",
+                url: "https://msashnobee.azurewebsites.net/api/Students/",
                 type: "POST",
                 data: student,
                 success: function (data, textStatus, jqXHR) {
@@ -211,7 +211,7 @@ var StudentModule = (function () {
             $.ajax({
                 type: "DELETE",
                 dataType: "json",
-                url: "http://msashnobee.azurewebsites.net/api/Students/" + studentid,
+                url: "https://msashnobee.azurewebsites.net/api/Students/" + studentid,
                 success: function (data) {
                     callback();
                 }

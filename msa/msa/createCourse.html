@@ -11,24 +11,9 @@
     <script src="scripts/CreateCourse.js"></script>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">MSA demo</a>
-                </div>
-                <div>
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Students</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+  
+
+    <div id="header"></div>
     <div class="container">
         <a href="index.html">Back to home</a>
         <h2>Create a Course</h2>
@@ -48,5 +33,10 @@
             </div>
         </form>
     </div>
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+        });
+    </script>
 </body>
 </html>

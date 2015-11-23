@@ -9,9 +9,11 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using msa.Models;
+using System.Web.Http.Cors;
 
 namespace msa.Controllers
 {
+    [EnableCors(origins: "https://msashnobee.azurewebsites.net", headers: "*", methods: "*")]
     public class EnrollmentsController : ApiController
     {
         private msaContext db = new msaContext();
