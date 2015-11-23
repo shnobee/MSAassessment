@@ -205,5 +205,17 @@ var StudentModule = (function () {
             });
 
         },
+
+        deleteStudent: function (studentid, callback) {
+
+            $.ajax({
+                type: "DELETE",
+                dataType: "json",
+                url: "http://msashnobee.azurewebsites.net/api/Students/" + studentid,
+                success: function (data) {
+                    callback();
+                }
+            });
+        }
 	};
 }());

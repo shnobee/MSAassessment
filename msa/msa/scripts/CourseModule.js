@@ -69,6 +69,18 @@ var CourseModule = (function () {
             });
 
         },
+
+        deleteCourse: function (courseid, callback) {
+
+            $.ajax({
+                type: "DELETE",
+                dataType: "json",
+                url: "http://msashnobee.azurewebsites.net/api/Courses/" + courseid,
+                success: function (data) {
+                    callback();
+                }
+            });
+        }
     };
 }());
 
