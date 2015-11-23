@@ -21,7 +21,7 @@ var CourseModule = (function () {
 
             $.ajax({
                 type: "GET",
-                dataType: "jsonp",
+                dataType: "json",
                 url: "http://msashnobee.azurewebsites.net/api/Courses",
                 success: function (data) {
                     console.log(data);

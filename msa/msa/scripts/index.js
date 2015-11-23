@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     })
 	console.log("This works!");
-	loadStudents();
 });
 
 
