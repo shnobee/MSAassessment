@@ -118,6 +118,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="courses.html" />
+    <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\fakeLoader.css" />
     <Content Include="css\style.css" />

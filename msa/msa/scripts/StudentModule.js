@@ -106,7 +106,7 @@ function loadStudentsTable() {
         // Show table after it's all loaded
         // The "hidden" class is part of bootstrap
         document.getElementById("tblstudent").classList.remove("hidden");
-        document.getElementById("loadingmsg").style.display = "none";
+
 
         // This basically navigates you to more details, edit or delete on the front page respective to the student you clicked
         // For more info, search "Event Delegation" online and have a read
@@ -164,6 +164,33 @@ var StudentModule = (function () {
                 }
              });
 			
+        },
+
+
+        getStudentById: function (id, callback) {
+
+            $.ajax({
+                type: "GET",
+                dataType: "json",
+                url: "http://msashnobee.azurewebsites.net/api/Students/" + id,
+                success: function (data) {
+                    console.log(data);
+                    callback(data);
+                }
+            });
+
+        },
+
+        updateStudent: function (studentid, student, callback) {
+
+            $.ajax({
+                url: "http://msashnobee.azurewebsites.net/api/Students/" + studentid,
+                type: "PUT",
+                data: student,
+                success: function (data, textStatus, jqXHR) {
+                    callback();
+                }
+            });
         },
 
         addStudent: function (student, callback) {

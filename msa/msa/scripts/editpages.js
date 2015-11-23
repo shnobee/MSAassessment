@@ -66,7 +66,7 @@ function setupStudentSubmit(id) {
         }
 
         StudentModule.updateStudent(id, newStudent, function () {
-            window.location.href = "index.html";
+            window.location.href = "students.html";
         });
     }
 };
@@ -74,6 +74,6 @@ function setupStudentSubmit(id) {
 //Go back to home without saving changes
 function setupReturn() {
     document.getElementById('btncancel').addEventListener('click', function () {
-        window.location.href = "index.html";
+        window.location.href = "students.html";
     });
 }
