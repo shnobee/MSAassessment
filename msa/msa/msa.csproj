@@ -118,6 +118,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="courses.html" />
+    <Content Include="createCourse.html" />
+    <Content Include="createStudent.html" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\fakeLoader.css" />
@@ -129,7 +131,9 @@
     <Content Include="index.html" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\CourseModule.js" />
+    <Content Include="scripts\CreateCourse.js" />
     <Content Include="scripts\createpages.js" />
+    <Content Include="scripts\CreateStudent.js" />
     <Content Include="scripts\detailpages.js" />
     <Content Include="scripts\editCourses.js" />
     <Content Include="scripts\editpages.js" />
