@@ -17,12 +17,13 @@ function setupCourseSubmit() {
         var newCourse = {
             // Access the data in the fields with .value 
             title: document.getElementById("Titleinput").value,
-            credits: document.getElementById("Creditsinput").value,     
+            credits: document.getElementById("Creditsinput").value,
         }
 
         // Take me back home when done!
         CourseModule.addCourse(newCourse, function () {
-            window.location.href = "course.html";
+            console.log("creation working");
+            window.location.href = "courses.html";
         });
     }
 
@@ -31,6 +32,6 @@ function setupCourseSubmit() {
 // Add event listener, cancel button will take you back to home page
 function setupReturn() {
     document.getElementById('btncancel').addEventListener('click', function () {
-        window.location.href = "course.html";
+        window.location.href = "courses.html";
     });
 }
