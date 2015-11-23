@@ -205,7 +205,7 @@ function loadCoursesTable() {
 
                     // Detail - this is true if clicked anywhere within the row
                 } else if (target.nodeName.toLowerCase() === "tr") {
-                    window.location.href = 'detail.html' + '?id=' + target.getAttribute("data-id");
+                    window.location.href = 'courseDetails.html' + '?id=' + target.getAttribute("data-id");
                     return;
                 }
 

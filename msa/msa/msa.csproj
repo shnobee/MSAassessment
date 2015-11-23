@@ -117,6 +117,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="courseDetails.html" />
     <Content Include="courses.html" />
     <Content Include="createCourse.html" />
     <Content Include="createStudent.html" />
@@ -130,6 +131,7 @@
     <Content Include="images\bg.png" />
     <Content Include="index.html" />
     <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\courseDetails.js" />
     <Content Include="scripts\CourseModule.js" />
     <Content Include="scripts\CreateCourse.js" />
     <Content Include="scripts\createpages.js" />
