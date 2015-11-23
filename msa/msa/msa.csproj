@@ -121,12 +121,15 @@
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\fakeLoader.css" />
     <Content Include="css\style.css" />
+    <Content Include="edit.html" />
     <Content Include="Global.asax" />
     <Content Include="images\bg.png" />
     <Content Include="index.html" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\CourseModule.js" />
     <Content Include="scripts\createpages.js" />
+    <Content Include="scripts\detailpages.js" />
+    <Content Include="scripts\editpages.js" />
     <Content Include="scripts\fakeLoader.min.js" />
     <Content Include="scripts\index.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />

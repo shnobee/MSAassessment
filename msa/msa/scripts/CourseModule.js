@@ -1,5 +1,5 @@
 ﻿// This event triggers on page load
-document.addEventListener("load", function () {
+document.addEventListener("DOMContentLoaded", function () {
     console.log("Hello!");
     $(".fakeloader").fakeLoader({
 
@@ -38,7 +38,7 @@ function loadCourses() {
     // We need a reference to the div/table that we are going to chuck our data into
     var courseTable = document.getElementById("tblcoursecontent");
 
-    StudentModule.getStudents(function (courseList) {
+    CourseModule.getCourses(function (courseList) {
         setupCoursesTable(courseList);
     });
 
