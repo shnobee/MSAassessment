@@ -1,5 +1,6 @@
 ﻿// This event triggers on page load
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("load", function () {
+    console.log("Hello!");
     $(".fakeloader").fakeLoader({
 
         timeToHide: 20000000, //Time in milliseconds for fakeLoader disappear

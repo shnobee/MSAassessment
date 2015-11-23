@@ -1,7 +1,6 @@
 // This event triggers on page load
 document.addEventListener("DOMContentLoaded", function () {
     $(".fakeloader").fakeLoader({
-
         timeToHide: 20000000, //Time in milliseconds for fakeLoader disappear
         spinner: "spinner1",//Options: 'spinner1', 'spinner2', 'spinner3', 'spinner4', 'spinner5', 'spinner6', 'spinner7'
         bgColor: "#2ecc71", //Hex, RGB or RGBA colors

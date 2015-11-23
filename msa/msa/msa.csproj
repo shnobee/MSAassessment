@@ -126,6 +126,7 @@
     <Content Include="index.html" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\CourseModule.js" />
+    <Content Include="scripts\createpages.js" />
     <Content Include="scripts\fakeLoader.min.js" />
     <Content Include="scripts\index.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
